@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans&display=swap");
+$gold: #FFD700;
+$darkgold: #f1ce07;
+$purple: #7851a9;
+$white: #fff;
+$black: #000;
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lora', serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+nav {
+    position: sticky !important;
+    top: 0px;
+    z-index: 10000;
+    box-shadow: 1px 2px 8px gray;
+    #navTop {
+    display: flex;
+    justify-content: space-between;
+    #mb-navTop-a {
+        padding: 0px;
+        padding-bottom: 5px;
+    }
+    a {
+        img {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            margin: 0px auto;
+        }
+        .mb-logo {
+            opacity: 0.6;
+        }
+        p {
+            line-height: 15px;
+            margin: 5px;
+            text-align: center;
+        }
+        .mb-big {
+            font-weight: bolder;
+            font-size: 20px;
+            color: $gold;
+        }
+        .mb-small {
+            font-size: 16px;
+            color: $purple;
+        }
+    }
+    button {
+        border: 1px solid $purple;
+    }
+    div {
+        ul {
+            li {
+                a {
+                    font-size: 18px;
+                    color: #7851a9;
+                    img {
+                        width: 30px;
+                        height: 32px;
+                    }
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+                
+            }
+        }
+    }
+    form {
+        #searchID {
+            border: 1px solid $gold;
+        }
+        button {
+            border: 1px solid $purple;
+            color: $purple;
+            transform: all 1s ease-in-out;
+            &:hover {
+                color: $white;
+                background-color: $purple;
+            }
+        }
+    }
+}
+}
+.modal {
+    z-index: 10001 !important;
+}
+.mb-hr-gold {
+    width: 20%;
+    height: 4px;
+    margin: 10px auto;
+    background-color: $gold;
+    border-radius: 20px;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+#carouselControls {
+    button {
+         background-color: rgba(0, 0, 0, 0.4);
+         border: none;
+         width: 70px;
+         top: 25%;
+    }
+}
+.mb-main-content {
+    .row {
+        .col-lg-2 {
+            padding: 5px;
+            .card {
+                border: none;
+                .card-body {
+                    padding: 0px;
+                    img {
+                        padding: 0px;
+                        margin: 0px;
+                        width: 100%;
+                        height: auto;
+                    }
+                    a {
+                        background-color: $purple;
+                        border: none;
+                        color: $white;
+                    }
+                    .mb-price {
+                        color: $darkgold;
+                        font-weight: bolder;
+                        span {
+                            font-weight: normal;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            .mb-btn-round {
+                border-radius: 50%;
+                background-color: $purple;
+                border: none;
+                i {
+                    font-size: 30px;
+                    padding: 7px 5px 7px 5px;
+                }
+            }
+        }
+        .mb-h1 {
+            padding-top: 50px;
+            font-weight: bold;
+        }
+        .mb-text-end {
+            text-align: right;
+            hr {
+                margin-right: 0px;
+                margin-left: auto;
+            }
+        }
+        .mb-h3 {
+            font-weight: bold;
+            padding: 20px;
+            hr {
+                width: 100%;
+                height: 2px;
+                border-radius: 20px;
+            }
+        }
+        .col-12 {
+            a {
+                color: $purple;
+                font-weight: bolder;
+            }
+            .mb-h4{
+                font-size: 25px;
+                font-weight: bolder;
+                span {
+                    color: $gold;
+                }
+            }
+            .row {
+                .col-6 {
+                    p {
+                        span {
+                            font-size: 18px;
+                            font-weight: bolder;
+                            color: $darkgold;
+                        }
+                    }
+                }
+                .mb-btn-checkout {
+                    background-color: $purple;
+                    border: none;
+                }
+            }
+        }
+        .col-md-6 {
+            a {
+                color: $purple;
+                font-weight: bolder;
+            }
+            .row {
+                .col-md-6 {
+                    
+                    .card {
+                        margin-top: 10px;
+                        .card-body {
+                            .card-title {
+                                font-size: 16px;
+                                    span {
+                                        font-size: 25px;
+                                        color: $darkgold !important;
+                                        font-weight: bolder;
+                                    }
+                            }
+                            .mb-a-center {
+                                 a {
+                                    color: $white;
+                                    background-color: $purple;
+                                    border: none;
+                                }
+                            }   
+                        }
+                    }
+                }
+            }
+        }
+        .col-4 {
+            .cost {
+                .row {
+                    .col-6 {
+                        span {
+                            color: $darkgold;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.footer {
+    .mb-copy {
+        padding: 0px;
+        background-color: #212529;
+        margin: 0px;
+        width: 100% !important;
+        a {
+            text-decoration: underline;
+            &:hover {
+                opacity: 0.8 !important;
+            }
+        }
+    }
+    .row {
+        .col-md-4 {
+            #mb-navTop-a{
+                color: $black;
+                background-color: $white;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                img {
+                    margin: 0px auto;
+                }
+                p {
+                    text-align: center;
+                    padding: 0px;
+                    margin: 0px;
+                    font-weight: bolder;
+                }
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            .container {
+                a {
+                    i {
+                        font-size: 20px;
+                        padding: 10px;
+                        color: $white;
+                    }
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }    
+        }
+    }
+}
+@media screen and (max-width: 1025px) {
+    #navTop {
+        div {
+            ul {
+                li {
+                    a {
+                        font-size: 16px !important;
+                    }
+                }
+            }
+        }
+    }
+    #carouselControls {
+        button {
+            width: 50px;
+        }
+    }
+    .mb-main-content {
+        .row {
+            .col-12 {
+                .mb-h4 {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 769px) {
+    #navTop {
+        div {
+            ul {
+                li {
+                    a {
+                        font-size: 15px;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    #carouselControls {
+        button {
+             width: 50px;
+        }
+    }
+    .mb-main-content {
+        .row {
+            .col-12 {
+                .mb-h4{
+                    font-size: 20px;
+                }
+                .row {
+                    .col-6 {
+                        p {
+                            font-size: 14px;
+                            span {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+            .mb-h1 {
+                h1 {
+                    font-size: 32px;
+                }
+                h2 {
+                    font-size: 25px;
+                }
+            }
+            .col-md-6 {
+                h1 {
+                    font-size: 28px;
+                }
+                p {
+                    font-size: 15px;
+                    padding-left: 0px !important;
+                }
+                .card {
+                    width: 100%;
+                    .card-body {
+                        .card-title {
+                            font-size: 14px !important;
+                            span {
+                                font-size: 18px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
+@media screen and (max-width: 426px) {
+    #carouselControls {
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    height: 60vh;
+                }
+            }
+        }
+        button {
+            height: 70px !important;
+            width: 40px;
+            top: 40%;
+        }
+    }
+    .mb-main-content {
+        .mb-btn-more {
+            background-color: $purple;
+            border: none;
+            font-size: 13px !important;
+        }
+        .row {
+            .mb-h1 {
+                h1 {
+                    font-size: 22px;
+                }
+                h2 {
+                    font-size: 20px;
+                }
+            }
+            .mb-h3 {
+                h3 {
+                    font-size: 18px;
+                }
+            }
+            .col-12 {
+                h1 {
+                    font-size: 28px;
+                }
+                .card {
+                    width: 60%;
+                    margin: 0px auto;
+                    .card-body{
+                        .card-title {
+                            font-size: 16px !important;
+                            span {
+                                font-size: 25px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 376px) {
+    #carouselControls {
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    height: 45vh;
+                }
+            }
+        }
+        button {
+             width: 30px;
+            //  height: 30px !important;
+             top: 40%;
+        }
+    }
+}
+@media screen and (max-width: 321px) {
+    #carouselControls {
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    height: 40vh;
+                }
+            }
+        }
+        button {
+            //  height: 30px !important;
+             top: 30%;
+        }
+    }
+}

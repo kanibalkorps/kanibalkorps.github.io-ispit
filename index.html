@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta -->
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="book, read, suggestion, author, poem, writer"/>
+    <meta name="description" content="Not sure what to read? Booker's got you covered! Take a look at some of our suggestions or simply search for what you would like to read next."/>
+    <meta name="author" content="Martin Birišić"/>
+    <!-- style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.min.css"/>
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon-16x16.png">
+    <title>Booker - book up!</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light p-0">
+        <div id="navTop" class="container-fluid m-0 px-md-3 px-1">    
+            <a href="index.html" id="mb-navTop-a" class="navbar-brand"><img class="d-block mb-logo" src="assets/img/book-logo.png" alt="book logo"/> <p class="mb-big">Booker</p></a> <!-- <p class="mb-small">Book Up!</p> -->
+            <!--hamburger-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <!-- navigation -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link px-3 py-md-4 py-xs-0">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <span class="d-md-none d-lg-inline-block">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-md-2 py-md-4 px-3" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-book"></i>
+                            <span class="d-md-none d-lg-inline-block">Category</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                          <li><a href="fiction.html" class="dropdown-item">Fiction</a></li>
+                          <li><a href="poetry.html" class="dropdown-item">Poetry</a></li>
+                          <li><a href="sale.html" class="dropdown-item">On sale</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gift.html" class="nav-link px-3 py-md-4 py-xs-0">
+                            <i class="fa-solid fa-gift"></i>
+                            <span class="d-md-none d-lg-inline-block">Gift</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link px-3 py-md-4 py-xs-0"> 
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="d-md-none d-lg-inline-block">Cart</span>
+                            </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3 px-md-2 py-md-4 py-xs-0" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span id="flag" class="flag-icon flag-icon-rs"></span>
+                            <!-- <span class="d-md-none d-lg-inline-block">Country</span> -->
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item"><i class="flag-icon flag-icon-rs"></i>
+                            Serbia</a></li>
+                            <li><a class="dropdown-item"><i class="flag-icon flag-icon-ru"></i>
+                            Russia</a></li>
+                            <li><a class="dropdown-item"><i class="flag-icon flag-icon-us"></i>
+                            America</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://kanibalkorps.github.io/portfolio/" class="nav-link px-3 py-md-4 py-xs-0">
+                            <!-- <i class="fa-solid fa-user"></i> -->
+                            <img src="assets/img/moja-slika-200x200.jpg" alt="profile image"/>
+                            <span class="d-md-none d-lg-inline-block">Account</span>
+                        </a>
+                    </li>
+                </ul>
+            
+                <form action="search.php" class="d-flex" name="mainSearch" method="GET">
+                    <input type="search" name="search" id="searchID" placeholder="Search for Authors or Books" class="form-control  me-2 mb-md-0 mb-2" aria-label="Search" size="23"/>
+                    <button class="btn btn-outline-success mb-md-0 mb-2" type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--cover w/ carousel-->
+    <div class="container-fluid m-0 p-0">
+        <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item mb-item1 active">
+                <img src="assets/img/bg-img2.jpg" class="w-100 d-md-block d-none" alt="first carousel image"/>
+                <img src="assets/img/bg-img2-cut.jpg" class="w-100 d-block d-md-none" alt="first carousel image"/>
+              </div>
+              <div class="carousel-item mb-item3 ">
+                <img src="assets/img/bg-img.jpg" class="w-100 d-md-block d-none" alt="second carousel image"/>
+                <img src="assets/img/bg-img-cut.jpg" class="w-100 d-block d-md-none" alt="second carousel image"/>              
+              </div>
+              <div class="carousel-item mb-item2 ">
+                <img src="assets/img/bg-img3.jpg" class="w-100 d-md-block d-none" alt="third carousel image"/>
+                <img src="assets/img/bg-img3-cut.jpg" class="w-100 d-block d-md-none" alt="third carousel image"/>              
+              </div>
+              <div class="carousel-item mb-item2 ">
+                <img src="assets/img/bg-img4.jpg" class="w-100 d-md-block d-none" alt="fourth carousel image"/>
+                <img src="assets/img/bg-img4-cut.jpg" class="w-100 d-block d-md-none" alt="fourth carousel image"/>              
+              </div>
+            </div>
+            <button class="carousel-control-prev h-50" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <!-- <span class="visually-hidden">Previous</span> -->
+            </button>
+            <button class="carousel-control-next h-50" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <!-- <span class="visually-hidden">Next</span> -->
+            </button>
+          </div>
+    </div>
+    <!--main content-->
+    <div class="container mb-main-content">
+      <!--h1-->
+        <div class="row">
+            <div class="col-12 text-center mb-h1">
+                <h1>Not sure what to read?</h1>
+                <h2>Take a look at some suggestions!</h2>
+                <div class="mb-hr-gold"></div>
+            </div>
+        </div>
+        <!--suggestions-->
+        <div class="row">
+            <div class="col-12 mb-h3">
+                <h3>Fiction</h3>
+                <hr></hr>
+            </div>
+        </div>
+        <button class="d-block d-md-none btn btn-primary mb-btn-more" role="button"><a href="fiction.html" class="text-decoration-none text-white">View more</a></button>
+        <div class="row">
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="fiction.html"><img src="assets/img/book1-medium.jpg" alt="book1 fiction"/></a>
+                    <h5 class="card-title text-capitalize py-1">song of achilles</h5>
+                    <p class="card-text">Madeline Miller</p>
+                    <p class="card-text mb-price">$15.99 <span class="text-muted text-uppercase">usd</span> </p>
+                    <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="fiction.html"><img src="assets/img/book2.jpg" alt="book2 fiction"/></a>
+                    <h5 class="card-title text-capitalize py-1">the nightingale</h5>
+                    <p class="card-text">Kristin Hannah</p>
+                    <p class="card-text mb-price">$17.00 <span class="text-muted text-uppercase">usd</span> </p>
+                    <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-none d-md-block col-md-3 col-lg-2">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="fiction.html"><img src="assets/img/book3.jpg" alt="book3 fiction"/></a>
+                    <h5 class="card-title text-capitalize py-1">stollen children</h5>
+                    <p class="card-text">Michael Wood</p>
+                    <p class="card-text mb-price">$12.59 <span class="text-muted text-uppercase">usd</span> </p>
+                    <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-none d-lg-block col-lg-2">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="fiction.html"><img src="assets/img/book4.jpg" alt="book4 fiction"/></a>
+                    <h5 class="card-title text-capitalize py-1">gone girl</h5>
+                    <p class="card-text">Gillian Flynn</p>
+                    <p class="card-text mb-price">$10.99 <span class="text-muted text-uppercase">usd</span> </p>
+                    <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-none d-lg-block col-lg-2">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="fiction.html"><img src="assets/img/book5.jpg" alt="book5 fiction"/></a>
+                    <h5 class="card-title text-capitalize py-1">pet semetery</h5>
+                    <p class="card-text">Stephen King</p>
+                    <p class="card-text mb-price">$13.99 <span class="text-muted text-uppercase">usd</span> </p>
+                    <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-none col-md-3 col-lg-2 d-md-flex justify-content-center align-items-center">
+                <a class="btn btn-primary mb-btn-round" href="fiction.html" role="button"><i class="fa-solid fa-ellipsis"></i></a>
+              </div>
+        </div>
+        <!--poetry-->
+        <div class="row">
+            <div class="col-12 mb-h3 mb-text-end">
+                <h3>Poetry</h3>
+                <hr></hr>
+            </div>
+        </div>
+        <button class="d-block d-md-none btn btn-primary mb-btn-more" role="button"><a href="poetry.html" class="text-decoration-none text-white">View more</a></button>
+        <div class="row">
+          <div class="d-none col-md-3 col-lg-2 d-md-flex justify-content-center align-items-center">
+            <a class="btn btn-primary mb-btn-round" href="poetry.html" role="button"><i class="fa-solid fa-ellipsis"></i></a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <a href="poetry.html"><img src="assets/img/book6.jpg" alt="book6 poetry"/></a>
+                  <h5 class="card-title text-capitalize py-1">the odyssey</h5>
+                  <p class="card-text">Robert Fagles, Homer, Bernard Knox</p>
+                  <p class="card-text mb-price">$14.00 <span class="text-muted text-uppercase">usd</span> </p>
+                  <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <a href="poetry.html"><img src="assets/img/book7.jpg" alt="book7 poetry"/></a>
+                  <h5 class="card-title text-capitalize py-1">way of chuang tzu</h5>
+                  <p class="card-text">Dalai Lama Dalai Lama XIV, Thomas Merton</p>
+                  <p class="card-text mb-price">$18.90 <span class="text-muted text-uppercase">usd</span> </p>
+                  <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-none d-md-block col-md-3 col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <a href="poetry.html"><img src="assets/img/book8.jpg" alt="book8 poetry"/></a>
+                  <h5 class="card-title text-capitalize py-1">book of longing</h5>
+                  <p class="card-text">Leonard Cohen</p>
+                  <p class="card-text mb-price">$6.39 <span class="text-muted text-uppercase">usd</span> </p>
+                  <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-none d-lg-block col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <a href="poetry.html"><img src="assets/img/book9.jpg" alt="book9 poetry"/></a>
+                  <h5 class="card-title text-capitalize py-1">the nectar of pain</h5>
+                  <p class="card-text">Najwa Zebian</p>
+                  <p class="card-text mb-price">$15.53 <span class="text-muted text-uppercase">usd</span> </p>
+                  <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-none d-lg-block col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <a href="poetry.html"><img src="assets/img/book10.jpg" alt="book10 poetry"/></a>
+                  <h5 class="card-title text-capitalize py-1">the inferno</h5>
+                  <p class="card-text">John Ciardi, Edward M. Cifelli, Dante Alighieri, Archibald T. MacAllister</p>
+                  <p class="card-text mb-price">$12.99 <span class="text-muted text-uppercase">usd</span> </p>
+                  <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!--on sale-->
+        <div class="row">
+            <div class="col-12 mb-h3">
+                <h3>On sale</h3>
+                <hr></hr>
+            </div>
+        </div>
+        <button class="d-block d-md-none btn btn-primary mb-btn-more" role="button"><a href="sale.html" class="text-decoration-none text-white">View more</a></button>
+        <div class="row">
+          <div class="col-6 col-md-3 col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <a href="sale.html"><img src="assets/img/book11.jpg" alt="book11 sale"/></a>
+                  <h5 class="card-title text-capitalize py-1">the 48 laws of power</h5>
+                  <p class="card-text">Joost Elffers, Robert Greene</p>
+                  <p class="card-text mb-price">$30.99 <span class="text-muted text-uppercase">usd</span> </p>
+                  <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <a href="sale.html"><img src="assets/img/book12.jpg" alt="book12 sale"/></a>
+                  <h5 class="card-title text-capitalize py-1">misery</h5>
+                  <p class="card-text">Stephen King</p>
+                  <p class="card-text mb-price">$9.69 <span class="text-muted text-uppercase">usd</span> </p>
+                  <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-none d-md-block col-md-3 col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <a href="sale.html"><img src="assets/img/book13.jpg" alt="book13 sale"/></a>
+                  <h5 class="card-title text-capitalize py-1">land of stories : the enchantress returns</h5>
+                  <p class="card-text">Chris Colfer</p>
+                  <p class="card-text mb-price">$11.49 <span class="text-muted text-uppercase">usd</span> </p>
+                  <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-none d-lg-block col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <a href="sale.html"><img src="assets/img/book14.jpg" alt="book14 sale"/></a>
+                  <h5 class="card-title text-capitalize py-1">spy among friends : philby and the great betrayal</h5>
+                  <p class="card-text">Ben Macintyre</p>
+                  <p class="card-text mb-price">$9.48 <span class="text-muted text-uppercase">usd</span> </p>
+                  <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-none d-lg-block col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <a href="sale.html"><img src="assets/img/book15.jpg" alt="book15 sale"/></a>
+                  <h5 class="card-title text-capitalize py-1">fifty shades of grey</h5>
+                  <p class="card-text">E. L. James</p>
+                  <p class="card-text mb-price">$8.00 <span class="text-muted text-uppercase">usd</span> </p>
+                  <a tabindex="0" role="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Great choice!" data-bs-content="It was added to your cart.">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-none col-md-3 col-lg-2 d-md-flex justify-content-center align-items-center">
+              <a class="btn btn-primary mb-btn-round" href="sale.html" role="button"><i class="fa-solid fa-ellipsis"></i></a>
+            </div>
+        </div>
+        <!--how to shop-->
+        <div class="row py-5">
+          <div class="col-12">
+            <hr></hr>
+            <h2 class="text-center">How to get started:</h2>
+            <div class="mb-hr-gold"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <img src="assets/img/find-book.png" class="rounded img-fluid" alt="find a book"/>
+            <h3 class="py-3 mb-h4 text-muted text-center"><span>Find</span> what you like</h3>
+          </div>
+          <div class="col-12 col-md-4">
+            <img src="assets/img/cart.png" class="rounded img-fluid" alt="fill a cart"/>
+            <h3 class="py-3 mb-h4 text-muted text-center"><span>Click</span> on 'Add to cart'</h3>
+          </div>
+          <div class="col-12 col-md-4">
+            <img src="assets/img/book-reading.png" class="rounded img-fluid" alt="enjoy your book"/>
+            <h3 class="py-3 mb-h4 text-muted text-center"><span>Order</span> and enjoy your book!</h3>
+          </div>
+        </div>
+        <hr></hr>
+    </div>
+    <!--footer-->
+    <div class="container-fluid footer p-0 pt-5 m-0 mt-5 bg-dark">
+        <div class="container pt-3">
+          <div class="row">
+            <div class="col-md-4 col-12 d-flex justify-content-center align-items-center pb-2">
+              <a href="#" id="mb-navTop-a" class="navbar-brand"><img class="d-block mb-logo" src="assets/img/book-logo.png" alt="book logo"/> <p class="mb-big">Booker</p></a>
+            </div>
+            <div class="col-md-4 col-12 pb-2"">
+              <p class="text-white text-center">
+                Thank you for shopping with us! If you'd like to continue shopping, here are some useful links:
+              </p>
+              <div class="container d-flex justify-content-center">
+                <a href="index.html"><i class="fa-solid fa-house-chimney"></i></a>
+                <a class="dropdown-toggle px-md-2 px-3" id="Dropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-book"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="Dropdown2">
+                  <li><a href="fiction.html" class="dropdown-item">Fiction</a></li>
+                  <li><a href="poetry.html" class="dropdown-item">Poetry</a></li>
+                  <li><a href="sale.html" class="dropdown-item">On sale</a></li>
+               </ul>
+                <a href="gift.html"><i class="fa-solid fa-gift"></i></a>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 pb-2">
+              <p class="text-center text-white">Connect with us:</p>
+              <div class="container d-flex justify-content-center">
+                <a href="assets/css/style.css"><i class="fa-brands fa-css3"></i></a>
+                <a href="assets/css/style.scss"><i class="fa-brands fa-sass"></i></a>
+                <a href="sitemap.xml"><i class="fa-solid fa-sitemap"></i></a>
+                <a href="mailto:martin.birisic.22.21&#64;ict&#46;edu&#46;rs"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.instagram.com/covek.bez.sluha/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/martin.birisic/"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="tel:0628323459"><i class="fa-solid fa-phone"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-copy mt-5">
+          <div class="col-12 d-flex justify-content-center align-items-center">
+            <h4 class="text-muted">&#169; <a href="https://kanibalkorps.github.io/portfolio/" class="text-muted">Martin Birišić 22/21</a></h4>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="popover.js"></script>
+</body>
+</html>
